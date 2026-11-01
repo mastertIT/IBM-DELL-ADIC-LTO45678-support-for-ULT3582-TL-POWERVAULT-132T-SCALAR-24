@@ -76,9 +76,9 @@ Do not send either RMU file through `dls24.exe`.
 
 Testing was performed in the **IBM 3582-L23** with IBM **full-height Fibre Channel** drives.
 
-| Drive model | Drive firmware | Test result |
-|---|---|---|
-| IBM ULT3580-TD4 — LTO4 | C7QH | Initialization, host load/unload, backup and restore successful |
-| IBM ULT3580-TD5 — LTO5 | H976 | Initialization, host load/unload, backup and restore successful |
-| IBM ULT3580-TD6 — LTO6 | H4T0 | Initialization, host load/unload, backup and restore successful |
-| IBM ULT3580-TD6 — LTO6 | KAJ8 | Initialization, host load/unload, backup and restore successful |
+| Drive model | Part numbers (PN) | Drive firmware | Test result |
+|---|---|---|---|
+| IBM ULT3580-TD4 — LTO4 | 95P4516 / 95P5192 | C7QH | Initialization, host load/unload, backup and restore successful |
+| IBM ULT3580-TD5 — LTO5 | 46X1362 / 46X2550 | H976 | Initialization, host load/unload, backup and restore successful |
+| IBM ULT3580-TD6 — LTO6 | 35P1970 / 39U3420 | H4T0 | Initialization, host load/unload, backup and restore successful |
+| IBM ULT3580-TD6 — LTO6 | 35P1970 / 39U3420 | KAJ8 | Initialization, host load/unload, backup and restore successful |
