@@ -1,7 +1,12 @@
-# IBM-ULT3582-TL---DELL-POWERVAULT-132T---ADIC-SCALAR-24-LTO4-LTO5-LTO6-FW
-Modified Firmware for IBM ULT3582-TL - DELL POWERVAULT 132T - ADIC SCALAR 24 to accept LTO4 LTO5 LTO6 tape drives from IBM. ensure the dip switches are set identically to the original drive as well as the Blue J8 LDI connector being reconnected to the drive.
+# IBM-ULT3582-TL---DELL-POWERVAULT-132T---ADIC-SCALAR-24 : LTO4–8 R3 M8
+Modified Firmware for IBM ULT3582-TL - DELL POWERVAULT 132T - ADIC SCALAR 24 to accept LTO4 LTO5 LTO6 LTO7 & LTO8 tape drives from IBM, the firmware also supports Type M formats in the Inventory and Barcode Logic. ensure the dip switches are set identically to the original drive as well as the Blue J8 LDI connector being reconnected to the drive.
+
 FC ID Jumper (Black loop) needs to be plugged into J39 for drives above LTO4, this is taken from original LTO1 or LTO2 drive.
 
+R3 permits `M8` barcodes only on an exactly identified TD8, for already
+initialized M8 tapes. It does not initialize blank M8-labelled tapes at this point.
+Moving a tape directly into the drive and initializing from inside ITDT is possible however.
+*planning to add type m initialization in the drive maint. menu in the future.*
 
 ## Install the library firmware
 
@@ -18,19 +23,19 @@ FC ID Jumper (Black loop) needs to be plugged into J39 for drives above LTO4, th
 ### IBM 3582-L23 — 314B.GY001
 
 ```powershell
-.\tools\dls24.exe -C1 -F .\firmware\library\ibm\3582-LTO-314B-LTO456-R1.lif
+.\tools\dls24.exe -C1 -F .\firmware\library\ibm\3582-LTO-314B-LTO4-8-R3-M8-EXPERIMENTAL.lif
 ```
 
 ### Dell PowerVault 132T LTO — 314D.GY001
 
 ```powershell
-.\dls24.exe -C1 -F .\firmware\library\dell\PV132T-LTO-314D-LTO456-R1-EXPERIMENTAL.lif
+.\dls24.exe -C1 -F .\firmware\library\dell\PV132T-LTO-314D-LTO4-8-R3-M8-EXPERIMENTAL.lif
 ```
 
 ### ADIC / Quantum Scalar 24 LTO — 314A.GY001
 
 ```powershell
-.\tools\dls24.exe -C1 -F .\firmware\library\adic\SC24-LTO-314A-LTO456-R1-EXPERIMENTAL.lif
+.\tools\dls24.exe -C1 -F .\firmware\library\adic\SC24-LTO-314A-LTO4-8-R3-M8-EXPERIMENTAL.lif
 ```
 
 ## Update the IBM RMU
@@ -82,3 +87,5 @@ Testing was performed in the **IBM 3582-L23** with IBM **full-height Fibre Chann
 | IBM ULT3580-TD5 — LTO5 | 46X1362 / 46X2550 | H976 | Initialization, host load/unload, backup and restore successful |
 | IBM ULT3580-TD6 — LTO6 | 35P1970 / 39U3420 | H4T0 | Initialization, host load/unload, backup and restore successful |
 | IBM ULT3580-TD6 — LTO6 | 35P1970 / 39U3420 | KAJ8 | Initialization, host load/unload, backup and restore successful |
+| IBM ULT3580-TD7 — LTO7 | 38L7172 / 38L7444 | S2T4 | Dump identity verified; R3 startup, load/unload and backup/restore pending |
+| IBM ULT3580-TD8 — LTO8 | 00VJ550 / 02XV407 | S2T4 | Dump identity verified; R3 startup, load/unload and backup/restore pending |
