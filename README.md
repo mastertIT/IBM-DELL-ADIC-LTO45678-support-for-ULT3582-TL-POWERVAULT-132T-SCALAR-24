@@ -1,3 +1,6 @@
+<img width="2485" height="231" alt="{F3C00A6A-07E0-4F27-A5A7-3E41A8669A49}" src="https://github.com/user-attachments/assets/482db900-2f5d-4055-ae2f-65be8c75e78f" />
+
+
 # IBM-ULT3582-TL---DELL-POWERVAULT-132T---ADIC-SCALAR-24 : LTO4–8 R3 M8
 Modified Firmware for IBM ULT3582-TL - DELL POWERVAULT 132T - ADIC SCALAR 24 to accept LTO4 LTO5 LTO6 LTO7 & LTO8 tape drives from IBM, the firmware also supports Type M formats in the Inventory and Barcode Logic. ensure the dip switches are set identically to the original drive as well as the Blue J8 LDI connector being reconnected to the drive.
 
